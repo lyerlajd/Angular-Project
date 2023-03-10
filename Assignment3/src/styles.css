@@ -1,4 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+:root
+{
+  --deep-purple: rgb(103, 58, 183);
+  --amber: rgb(255, 215, 64);
+  --light-amber: rgb(255, 215, 130);
+}
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -12,12 +17,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 app-post
 {
   height: 100%;
-  background-color: blue;
+  background-color: var(--deep-purple);
+  padding: 15px;
 }
 app-post-list
 {
   height: 100%;
-  background-color: orange;
+  background-color: var(--deep-purple);
+  padding: 15px;
 }
 
 .button-wrapper
@@ -31,3 +38,5 @@ button
   margin-top: 50px;
   grid-column: 2;
 }
+
+mat-expansion-panel:hover {background-color: var(--amber);}
