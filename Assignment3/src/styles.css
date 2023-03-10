@@ -1,5 +1,6 @@
 :root
 {
+  --purple: rgb(159, 125, 218);
   --deep-purple: rgb(103, 58, 183);
   --amber: rgb(255, 215, 64);
   --light-amber: rgb(255, 215, 130);
@@ -17,13 +18,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 app-post
 {
   height: 100%;
-  background-color: var(--deep-purple);
+  background-color: var(--purple);
   padding: 15px;
 }
 app-post-list
 {
   height: 100%;
-  background-color: var(--deep-purple);
+  background-color: var(--purple);
   padding: 15px;
 }
 

@@ -17,7 +17,7 @@ export class PostComponent {
   @Output() postCreated = new EventEmitter<Post>();
   onAddPost()
   {
-    this.m_title = this.binding.slice(0, 30);
+    this.m_title = this.binding.slice(0, 30) + '...';
     this.m_description = this.binding;
 
     const post: Post = {title: this.m_title, description: this.m_description};
