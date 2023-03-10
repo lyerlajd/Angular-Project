@@ -2,3 +2,20 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.wrapper
+{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 90%;
+}
+app-post
+{
+  height: 100%;
+  background-color: blue;
+}
+app-post-list
+{
+  height: 100%;
+  background-color: orange;
+}
