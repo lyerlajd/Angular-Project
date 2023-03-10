@@ -15,6 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule}  from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { FormsModule } from '@angular/forms';
 
 // ng
 @NgModule({
@@ -34,7 +35,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatFormFieldModule,
     MatInputModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

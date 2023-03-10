@@ -1,9 +1,10 @@
 <mat-card>
   <mat-form-field>
-    <textarea matInput rows="10"></textarea>
+    <textarea matInput rows="10" [(ngModel)]="binding">
+    </textarea>
   </mat-form-field>
 </mat-card>
 
 <div class="button-wrapper">
-  <button mat-raised-button color="accent">Save Post</button>
+  <button mat-raised-button color="accent" (click)="onAddPost()">Save Post</button>
 </div>
