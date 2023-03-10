@@ -19,3 +19,15 @@ app-post-list
   height: 100%;
   background-color: orange;
 }
+
+.button-wrapper
+{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+button
+{
+  margin-top: 50px;
+  grid-column: 2;
+}
