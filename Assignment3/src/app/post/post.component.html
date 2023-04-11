@@ -1,4 +1,4 @@
-<mat-card>
+<!-- <mat-card>
   <mat-form-field>
     <textarea matInput rows="10" [(ngModel)]="binding">
     </textarea>
@@ -7,4 +7,25 @@
 
 <div class="button-wrapper">
   <button mat-raised-button color="accent" (click)="onAddPost()">Save Post</button>
-</div>
+</div> -->
+
+
+
+
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm = "ngForm">
+    <mat-form-field>
+      <!-- title -->
+      <input matInput type="text" name="title" #title required ngModel>
+      <mat-error *ngIf="title.invalid">{{getErrorMessage()}}</mat-error>    <!-- getErrorMessage() is not functional -->
+    </mat-form-field>
+    <mat-form-field>
+      <!-- main content -->
+      <textarea matInput rows="10" name="content" #content required ngModel></textarea>
+      <mat-error *ngIf="content.invalid">{{getErrorMessage()}}</mat-error>    <!-- getErrorMessage() is not functional -->
+    </mat-form-field>
+    <button mat-raised-button color="primary" type ="submit">Save post</button>
+  </form>
+</mat-card>
+
+

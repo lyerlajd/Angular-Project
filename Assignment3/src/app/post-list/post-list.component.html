@@ -5,7 +5,8 @@
       <mat-expansion-panel-header>
         {{post.title}}
       </mat-expansion-panel-header>
-    <p>{{post.description}}</p>
+    <!-- <p>{{post.description}}</p> -->
+    <p>{{post.content}}</p>
     </mat-expansion-panel>
   </mat-accordion>
   <h3 *ngIf="posts.length <= 0">Posts will be shown over here!</h3>

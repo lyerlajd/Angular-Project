@@ -15,12 +15,36 @@ export class PostComponent {
   m_description = '';
 
   @Output() postCreated = new EventEmitter<Post>();
-  onAddPost()
-  {
-    this.m_title = this.binding.slice(0, 30) + '...';
-    this.m_description = this.binding;
+  // onAddPost()
+  // {
+  //   this.m_title = this.binding.slice(0, 30) + '...';
+  //   this.m_description = this.binding;
 
-    const post: Post = {title: this.m_title, description: this.m_description};
+  //   const post: Post = {title: this.m_title, description: this.m_description};
+  //   this.postCreated.emit(post);
+
+  onAddPost(form: NgForm)
+  {
+    if(form.invalid)
+    {
+      return;
+    }
+    /*
+    if (form.invalid)
+    {
+      if (title.invalid) { getErrorMessage("Title is invalid."); }
+      if (content.invalid) { getErrorMessage("Content is invalid."); }
+      return;
+    } */
+
+    const post: Post = {
+      title: form.value.title,
+      content: form.value.content};
     this.postCreated.emit(post);
+  }
+
+  getErrorMessage(errorMessage)
+  {
+    return errorMessage;
   }
 }
