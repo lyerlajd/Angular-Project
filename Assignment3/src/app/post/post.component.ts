@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from "@angular/core";
 import { NgForm } from "@angular/forms";
 
 import { Post } from "./post.model";
+import { PostService } from "./post.services";
 
 @Component({
   selector:'app-post',
@@ -14,14 +15,9 @@ export class PostComponent {
   m_title = '';
   m_description = '';
 
-  @Output() postCreated = new EventEmitter<Post>();
-  // onAddPost()
-  // {
-  //   this.m_title = this.binding.slice(0, 30) + '...';
-  //   this.m_description = this.binding;
+  //@Output() postCreated = new EventEmitter<Post>();
+  constructor(public postsService: PostService){}
 
-  //   const post: Post = {title: this.m_title, description: this.m_description};
-  //   this.postCreated.emit(post);
 
   onAddPost(form: NgForm)
   {
@@ -37,10 +33,12 @@ export class PostComponent {
       return;
     } */
 
-    const post: Post = {
-      title: form.value.title,
-      content: form.value.content};
-    this.postCreated.emit(post);
+    // const post: Post = {
+    //   title: form.value.title,
+    //   content: form.value.content};
+    // this.postCreated.emit(post);
+
+    this.postsService.addPost(form.value.title, form.value.content);
   }
 
   getErrorMessage(errorMessage)
