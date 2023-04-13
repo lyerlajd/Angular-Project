@@ -14,18 +14,18 @@
 
 <mat-card>
   <form (submit)="onAddPost(postForm)" #postForm = "ngForm">
-    <mat-form-field>
+    <mat-form-field id="mat-title">
       <!-- title -->
+      <label>Title</label>
       <input matInput type="text" name="title" #title required ngModel>
       <mat-error *ngIf="title.invalid">{{getErrorMessage()}}</mat-error>    <!-- getErrorMessage() is not functional -->
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field id="mat-content">
       <!-- main content -->
+      <label>Content</label>
       <textarea matInput rows="10" name="content" #content required ngModel></textarea>
       <mat-error *ngIf="content.invalid">{{getErrorMessage()}}</mat-error>    <!-- getErrorMessage() is not functional -->
     </mat-form-field>
-    <button mat-raised-button color="primary" type ="submit">Save post</button>
+    <button mat-raised-button color="primary" type ="submit" id="save-button">Save post</button>
   </form>
 </mat-card>
-
-
